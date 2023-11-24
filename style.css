@@ -28,14 +28,35 @@ span {
 	font-size: 20px;
 	font-family: "Ink Free";
 	letter-spacing: 1px;
-	color: rgb(133, 161, 196);
-	text-shadow: 0 0 0 #ffffffbf, 0 0 2px #1e90ff, 0 0 4px #1e90ff,
-		0 0 6px #1e90ff, 0 0 8px #1e90ff, 0 0 10px #1e90ff;
+	color: azure;
+	text-shadow: 0 0 0 azure, 0 0 8px #3371b0, 0 0 4px #1e90ff, 0 0 6px #1e90ff,
+		0 0 8px #1e90ff, 0 0 10px #1e90ff;
 }
 
 .spinner {
 	border-radius: 50%;
-	box-shadow: 3px 0 1px -1px #fff, 5px 0 5px #1e90ff80,
+	box-shadow: 3px 0 1px -1px #e51111, 5px 0 5px #f41eff80,
 		inset -10px 0 10px -5px #1e90ff80;
 	animation: loading 1s linear infinite;
+}
+
+.spinner:before {
+	position: absolute;
+	width: 160px;
+	height: 160px;
+	margin: 10% 0 0 10%;
+	border-radius: 50%;
+	content: " ";
+	box-shadow: 2px 0 1px -1px #980f8d, 10px 0 5px -5px #ff1ef080,
+		inset -3px 0 3px #d61eff80;
+}
+
+@keyframes loading {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
 }
